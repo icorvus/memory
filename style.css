@@ -65,7 +65,6 @@ body {
     border: #364958 2px solid;
     user-select: none;
     -webkit-user-select: none;
-    margin-top: 10px;
 }
 
 .tile {
@@ -89,4 +88,28 @@ body {
 
 .disabled {
     pointer-events: none;
+}
+
+.btn {
+    padding: 5px 30px ;
+    background-color: #364958;
+    color: #F1F2F6;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.mid-font {
+    font-size: 1.5rem;
+}
+
+.btn,
+.tile-container,
+.info {
+    margin-top: 10px;
+}
+
+.info {
+    font-weight: bold;
+    color: #364958;
 }
