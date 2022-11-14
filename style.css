@@ -75,6 +75,7 @@ body {
     border: #364958 2px solid;
     font-size: 3em;
     cursor: pointer;
+    background-color: #6e90ac;
 }
 
 .tile.hidden {
@@ -84,4 +85,8 @@ body {
 
 .tile.hidden:hover {
     background-color: #526c81;
+}
+
+.disabled {
+    pointer-events: none;
 }

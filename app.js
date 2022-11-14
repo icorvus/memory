@@ -10,10 +10,32 @@ const animals = {
 }
 
 const animalsList = ['🦁', '🐶', '🦄', '🐷', '🐻', '🐼', '🦉', '🐸', '🦁', '🐶', '🦄', '🐷', '🐻', '🐼', '🦉', '🐸']
+let animalsShown = [];
 
+const checkPair = () => {
+    if (animalsShown[0].textContent === animalsShown[1].textContent) return true;
+    return false;
+};
 
 const tileClick = event => {
-    event.target.classList.toggle('hidden');
+    if (animalsShown.length === 2){
+        if (checkPair()){
+            animalsShown[0].classList.add('disabled');
+            animalsShown[1].classList.add('disabled');
+        } else {
+            animalsShown[0].classList.add('hidden');
+            animalsShown[1].classList.add('hidden');
+        }
+        animalsShown = [];
+    } else {
+        event.target.classList.remove('hidden');
+        animalsShown.push(event.target);
+        if (checkPair()){
+            animalsShown[0].classList.add('disabled');
+            animalsShown[1].classList.add('disabled');
+            animalsShown = [];
+        }
+    }
 }
 
 const fillBoard = () => {
